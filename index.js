@@ -1,21 +1,27 @@
+// Require dependencies
 var feathers = require('feathers');
 var mongoose = require('mongoose');
 var mongooseService = require('feathers-mongoose-service');
 
-var beaconService = {
-  messages: [],
+// Connect to mongo
+mongoose.connect('mongodb://localhost/beacons');
 
-  find: function(params, callback) {
-    callback(null, this.messages);
-  },
+// Create your Mongoose-Service, for a `User`
+var beaconService = mongooseService('message', {
+        data: {type : String, required : true, index: {unique: true, dropDups: true}}
+    }, mongoose);
 
-  create: function(data, params) {
-    console.log(data);
-    this.messages.push(data);
-  }
-};
+// Setup Feathers
+var app = feathers();
 
-feathers()
-  .configure(feathers.socketio())
+// Configure Feathers
+app.use(feathers.logger('dev')); // For debugging purposes.
+
+// Specify port
+var port = 8000;
+
+app.configure(feathers.socketio())
   .use('/messages', beaconService)
-  .listen(8000);
+  .listen(port, function() {
+    console.log('Express server listening on port ' + port);
+  });
