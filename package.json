@@ -9,6 +9,8 @@
   "author": "Koji Wakayama",
   "license": "MIT",
   "dependencies": {
-    "feathers": "^0.4.0"
+    "feathers": "^0.4.0",
+    "feathers-mongoose-service": "^1.1.0",
+    "mongoose": "^3.8.12"
   }
 }

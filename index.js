@@ -1,4 +1,6 @@
 var feathers = require('feathers');
+var mongoose = require('mongoose');
+var mongooseService = require('feathers-mongoose-service');
 
 var beaconService = {
   messages: [],
