@@ -19,6 +19,10 @@ npm install
 node .
 ```
 
+## Api
+see [feathers-mongoose docs](https://github.com/feathersjs/feathers-mongoose/blob/master/docs/API.md#finding-documents)
+
+
 ##Author
 Koji Wakayama
 

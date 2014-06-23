@@ -6,9 +6,17 @@ var mongooseService = require('feathers-mongoose-service');
 // Connect to mongo
 mongoose.connect('mongodb://localhost/beacons');
 
-// Create your Mongoose-Service, for a `User`
-var beaconService = mongooseService('message', {
-        data: {type : String, required : true, index: {unique: true, dropDups: true}}
+// Create Mongoose-Service
+var beaconService = mongooseService('beacon', {
+      event: {type : String},
+      timestamp: {type : Number},
+      id: {type : String},
+      identifier: {type : String},
+      uuid: {type : String},
+      major: {type : Number},
+      minor: {type : Number},
+      proximity: {type : Number},
+      rssi: {type : Number}
     }, mongoose);
 
 // Setup Feathers
@@ -21,7 +29,7 @@ app.use(feathers.logger('dev')); // For debugging purposes.
 var port = 8000;
 
 app.configure(feathers.socketio())
-  .use('/messages', beaconService)
+  .use('/beacons', beaconService)
   .listen(port, function() {
     console.log('Express server listening on port ' + port);
   });
