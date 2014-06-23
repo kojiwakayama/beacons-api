@@ -1,4 +1,4 @@
-Beacons-api
+beacons-api
 ===========
 
 ##Features
