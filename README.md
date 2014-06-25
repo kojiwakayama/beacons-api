@@ -1,5 +1,7 @@
 # beacons-api
 
+A RESTful Api for [beacons-transmitter](https://github.com/kojiwakayama/beacons-transmitter) that can be interfaced over HTTP or WebSockets.
+
 ## Features
 * [Feathers](http://feathersjs.com/)
 * [Feathers Mongoose](https://github.com/feathersjs/feathers-mongoose)
@@ -26,13 +28,13 @@ npm start
 
 ##### Finding data:
 
-see [feathers-mongoose docs](https://github.com/feathersjs/feathers-mongoose/blob/master/docs/API.md#finding-documents)
-
 Example Request:
 
 ```
 GET /beacon?conditions={"timestamp":{"$gte":1403701368624,"$lte":1403701368624}}&fields=""&options={"sort":{"timestamp":-1}}
 ```
+
+see [feathers-mongoose docs](https://github.com/feathersjs/feathers-mongoose/blob/master/docs/API.md#finding-documents)
 
 ## Beacons transmitter
 see [beacons-transmitter](https://github.com/kojiwakayama/beacons-transmitter)
