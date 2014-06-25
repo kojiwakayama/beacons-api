@@ -16,7 +16,8 @@ var beaconService = mongooseService('beacon', {
       major: {type : Number},
       minor: {type : Number},
       proximity: {type : Number},
-      rssi: {type : Number}
+      rssi: {type : Number},
+      tag: {type : String}
     }, mongoose);
 
 // Setup Feathers
