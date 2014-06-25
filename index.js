@@ -15,8 +15,9 @@ var beaconService = mongooseService('beacon', {
       uuid: {type : String},
       major: {type : Number},
       minor: {type : Number},
-      proximity: {type : Number},
-      rssi: {type : Number},
+      proximity: {type : String},
+      distance: {},
+      rssi: {},
       tag: {type : String}
     }, mongoose);
 
