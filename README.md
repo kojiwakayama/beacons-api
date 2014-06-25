@@ -21,12 +21,15 @@ npm start
 ```
 
 ## Api
+
 ##### Endpoints:
 
 * /beacon
 * /ranges
 
 ##### Finding data:
+
+_You have access to the powerful query language behind Mongoose and MongoDB._
 
 Example Request:
 
