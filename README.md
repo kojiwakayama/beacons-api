@@ -34,7 +34,7 @@ _You have access to the powerful query language behind Mongoose and MongoDB._
 Example Request:
 
 ```
-GET /beacon?conditions={"timestamp":{"$gte":1403701368624,"$lte":1403701368624}}&fields=""&options={"sort":{"timestamp":-1}}
+GET /beacon?conditions={"timestamp":{"$lte":1403784375317,"$gte":1403784375315}}&fields=""&options={"sort":{"timestamp":-1}}
 ```
 
 see [feathers-mongoose docs](https://github.com/feathersjs/feathers-mongoose/blob/master/docs/API.md#finding-documents)
