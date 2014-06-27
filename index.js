@@ -8,9 +8,9 @@ mongoose.connect('mongodb://localhost/beacons-api');
 
 // Create Mongoose-Service
 var beaconService = mongooseService('beacon', {
-      event: {type : String},
-      timestamp: {type : Number},
-      id: {type : String},
+      event: {type : String, index: true},
+      timestamp: {type : Number, index: true},
+      id: {type : String, index: true},
       identifier: {type : String},
       uuid: {type : String},
       major: {type : Number},
@@ -18,13 +18,13 @@ var beaconService = mongooseService('beacon', {
       proximity: {type : String},
       distance: {},
       rssi: {},
-      tag: {type : String}
+      tag: {type : String, index: true}
     }, mongoose);
 
 var rangesService = mongooseService('ranges', {
-      event: {type : String},
-      timestamp: {type : Number},
-      tag: {type : String},
+      event: {type : String, index: true},
+      timestamp: {type : Number, index: true},
+      tag: {type : String, index: true},
       beacons: []
     }, mongoose);
 
