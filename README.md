@@ -46,4 +46,4 @@ see [beacons-transmitter](https://github.com/kojiwakayama/beacons-transmitter)
 Koji Wakayama
 
 ## License
-[MIT](http://opensource.org/licenses/MIT)
+[MIT](http://kojiwakayama.mit-license.org)
